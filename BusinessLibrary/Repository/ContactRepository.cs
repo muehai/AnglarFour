@@ -10,7 +10,7 @@ using BusinessLibrary.Model.Contact;
 
 namespace BusinessLibrary.Repository
 {
-    //Add the mess
+    //Add the message t reposit
     public class ContactRepository: IContactRepository
     {
         
@@ -59,7 +59,8 @@ namespace BusinessLibrary.Repository
                     return await db.SaveChangesAsync() >= 1;
                 }
             }
-
+            
+           
             public async Task<bool> DeletContact(int id)
             {
                 using (ContactDBContext db = new ContactDBContext())

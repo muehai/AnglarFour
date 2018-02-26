@@ -24,6 +24,11 @@
     <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ClientApp\app\_service\" />
+    <Folder Include="ClientApp\app\_models\" />
+  </ItemGroup>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">

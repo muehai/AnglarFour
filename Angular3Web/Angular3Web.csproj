@@ -21,12 +21,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\_models\Contact.ts" />
+    <None Remove="ClientApp\app\_models\index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\app\_service\" />
-    <Folder Include="ClientApp\app\_models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\_models\Contact.ts" />
+    <TypeScriptCompile Include="ClientApp\app\_models\index.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

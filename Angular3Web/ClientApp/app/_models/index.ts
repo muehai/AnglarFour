@@ -1,0 +1,1 @@
+﻿export * from './Contact'; /* export to the same for*/

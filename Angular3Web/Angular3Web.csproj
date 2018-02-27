@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,11 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj" />
+    <Folder Include="ClientApp\app\_service\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\app\_service\" />
+    <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>

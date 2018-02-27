@@ -23,6 +23,7 @@ namespace DataAccessLibrary.Models
         //Configure the database for message 
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            //Add table to message 
             mb.Entity<Contacts>(entity =>
             {
                 entity.HasKey(e => e.ContactsId);

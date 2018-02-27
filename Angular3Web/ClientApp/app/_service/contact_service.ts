@@ -25,12 +25,12 @@ export class ContactService {
     }
 
     //Save in database/post to database
-    SaveContact(contac: Contact): Observable<string> {
-        let body = JSON.stringify(contac);
+    SaveContact(contact: Contact): Observable<string> {
+        let body = JSON.stringify(contact);
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post(this._saveUrl, body, options).map(res => res.json().message).catch(this.handleError); 
+        return this.http.post(this._saveUrl, body, options).map(res => res.json().message).catch(this.HandleError); 
     }
 
     //Delete Operation
@@ -38,7 +38,7 @@ export class ContactService {
         //Debugger 
         var deleteByIdUrl = this._deleteById + '/' + id
 
-        return this.http.delete(deleteByIdUrl).map(respones => respones.json().message).catch(this.handleError);
+        return this.http.delete(deleteByIdUrl).map(respones => respones.json().message).catch(this.HandleError);
     }
 
     private HandleError(error : Response)

@@ -24,6 +24,7 @@ namespace Angular3Web
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddMvc();
+            //Add and populate the database 
             services.AddTransient<IContactRepository, ContactRepository>();
         }
 

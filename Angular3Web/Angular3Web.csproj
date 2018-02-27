@@ -22,12 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\app\components\contact\contact.component.ts" />
     <None Remove="ClientApp\app\_models\Contact.ts" />
     <None Remove="ClientApp\app\_models\index.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\app\_service\" />
+    <None Remove="ClientApp\app\_service\contact_service.ts" />
+    <None Remove="ClientApp\app\_service\index.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,8 +34,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\contact\contact.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\_models\Contact.ts" />
     <TypeScriptCompile Include="ClientApp\app\_models\index.ts" />
+    <TypeScriptCompile Include="ClientApp\app\_service\contact_service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\_service\index.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

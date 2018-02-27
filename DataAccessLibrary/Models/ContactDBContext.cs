@@ -15,7 +15,8 @@ namespace DataAccessLibrary.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //Add new database 
+                //Add new database
+                optionsBuilder.UseSqlServer(@"Server = SESTKN-L1408005\SQLEXPRESS; Database = ContactDB; Trusted_Connection = True; MultipleActiveResultSets = true");
 
             }
         }

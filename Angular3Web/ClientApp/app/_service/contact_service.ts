@@ -35,12 +35,13 @@ export class ContactService {
 
     //Delete Operation
     deleteContac(id: number): Observable<string> {
-        //Debugger 
+        //Debugger
         var deleteByIdUrl = this._deleteById + '/' + id
 
         return this.http.delete(deleteByIdUrl).map(respones => respones.json().message).catch(this.HandleError);
     }
 
+    //Add error the message
     private HandleError(error : Response)
     {
         return Observable.throw(error.json().error) || 'OperationError on server';

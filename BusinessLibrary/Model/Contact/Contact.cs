@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BusinessLibrary.Model.Contact
 {
-    //Add the to
+    //Add the class of message
     public class Contact
     {
         public int ContactId { get; set; }

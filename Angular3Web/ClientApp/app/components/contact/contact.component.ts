@@ -66,9 +66,9 @@ export class ContactComponent implements OnInit {
    }
 
 
-   //onRowSelect(event) {
-   //}
-    //Save data to database
+   onRowSelect(event:any) {
+   }
+    
    save() {
        this.contactService.SaveContact(this.contact)
           .subscribe(response => {
